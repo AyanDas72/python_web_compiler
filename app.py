@@ -10,7 +10,7 @@ def home():
 @app.route('/run', methods=['POST'])
 def compile_code():
     data = request.get_json()
-    print("Received JSON:", data)  
+    #print("Received JSON:", data)  
 
     code = data.get("code", "")
     language = data.get("language", "python").strip()
@@ -18,7 +18,7 @@ def compile_code():
 
     commands = {
         "python": ["python", "-c", code],  
-        "java": ["java", "-cp", ".", "Main"],  
+        #"java": [],  
     }
 
     if language not in commands:
