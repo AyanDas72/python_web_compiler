@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
-    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/static/style.css" />
     <title>Python Compiler</title>
   </head>
   <body>
@@ -18,8 +21,8 @@
         </ul>
       </nav>
     </header>
-    
-    <hr>
+
+    <hr />
 
     <main id="main">
       <!-- code editer -->
@@ -35,15 +38,24 @@
           </div>
           <button id="run"><i class="fa-solid fa-play"></i> Run</button>
         </div>
-        <textarea id="code-editor" class="box" > print("Hello, Python!") </textarea>
+        <textarea id="code-editor" class="box" placeholder="-----Code Here-----"></textarea>
       </section>
 
       <!-- Execution section -->
-      <section id="output">
-        <h3>Output:</h3>
-        <textarea id="outputFrame" class="box" >-----Output-----</textarea>
-        <!-- <iframe id="outputFrame" class="box" frameborder="1px"></iframe> -->
+      <section id="execute">
+        <section id="input">
+          <h3>Input:</h3>
+          <textarea id="user-input" placeholder="-----Enter input here-----"></textarea>
+        </section>
+        <section id="output">
+          <h3>Output:</h3>
+          <textarea id="outputFrame" placeholder="-----Output-----"></textarea>
+          <!-- <iframe id="outputFrame" class="box" frameborder="1px"></iframe> -->
+        </section>
       </section>
     </main>
+
+    <!-- adding script -->
+    <script src="/static/script.js"></script>
   </body>
 </html>
